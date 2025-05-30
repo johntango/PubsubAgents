@@ -188,4 +188,3 @@ Distributed under a permissive license. Attribution required for reproduction.
 
 ---
 
-Let me know if you want a Markdown file version or extended API documentation.
