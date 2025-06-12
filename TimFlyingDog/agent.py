@@ -4,8 +4,11 @@ from agents import Agent, Runner, set_default_openai_key, gen_trace_id, trace
 from agents.mcp import MCPServerSse, MCPServerSseParams
 from agents.model_settings import ModelSettings
 
-# Set your OpenAI key
-set_default_openai_key(os.environ["OPENAI_API_KEY"])
+# Set your OpenAI key (fail fast if not provided)
+openai_key = os.getenv("OPENAI_API_KEY")
+if not openai_key:
+    raise RuntimeError("OPENAI_API_KEY environment variable is not set")
+set_default_openai_key(openai_key)
 
 # Define common model settings
 model_settings = ModelSettings(
