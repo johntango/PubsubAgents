@@ -1,6 +1,5 @@
+faust
+python-json-logger
 google-api-client
 google-auth-oauthlib
 google-auth
-os
-pickle
-time
